@@ -168,13 +168,13 @@ def get_tdis_tplot(paths):
             tplot_a = int(max(times_at_maximum))     
 
 
-    else:
-        tdis, tplot_p, tplot_a = find_dissolution_plotting_times(path, circ=circ_bool)
-    # print("found times...appending...")
-    dissolution_times.append(tdis)
-    plotting_times_peri.append(tplot_p)
-    plotting_times_apo.append(tplot_a)
-    print(n, tdis, tplot_p, tplot_a) 
+        else:
+            tdis, tplot_p, tplot_a = find_dissolution_plotting_times(path, circ=circ_bool)
+        # print("found times...appending...")
+        dissolution_times.append(tdis)
+        plotting_times_peri.append(tplot_p)
+        plotting_times_apo.append(tplot_a)
+        print(n, tdis, tplot_p, tplot_a) 
 
     return dissolution_times, plotting_times_peri, plotting_times_apo
 

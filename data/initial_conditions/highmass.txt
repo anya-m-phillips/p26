@@ -1,0 +1,4 @@
+nstars           : 14999
+n_binaries       : 2665
+M_cluster        : 9940.10735019567 Msun
+M_>8             : 2915.5300613230274 Msun

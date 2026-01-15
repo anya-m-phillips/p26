@@ -1,0 +1,5 @@
+nstars           : 14999
+n_binaries       : 2665
+vir. radius      : 0.75 pc
+fbin             : 0.21606940165396465
+half-mass radius : 0.6374161985030333 pc
