@@ -1,0 +1,14 @@
+running COSMIC function
+...generating InitialBinaryTable
+estimating scale for correct # of stars
+scipy.optimize.root_scalar successfully converged on a scale factor
+scaled COSMIC outputs to generate 1000000 stars
+sampling InitialBinaryTable and single masses
+sanity check: 1000000 masses generated
+concatenating binary properties
+gathering CMs
+adding astropy units
+done; compiling info
+saving cosmic population to large_COSMIC_stellar_pop.npz
+saving summary info to large_COSMIC_stellar_pop.txt
+info printed to large_COSMIC_stellar_pop.txt
