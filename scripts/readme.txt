@@ -12,5 +12,5 @@ compute_binary_matrices.py: abandoned script to compute the individual evolution
 -------- initial conditions -------
 gen_cosmic_pop.py: generates a cosmic binary population from the multidim distribution
 gen_king_clust.py: arrange the cosmic stellar+binary population into a king profile
-
+make_king_profile.py: an almost exact copy of king.py by Carl Rodriguez for the CMC code base; called by gen_king_clust.py
 
