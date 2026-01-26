@@ -1011,7 +1011,7 @@ def compute_ahs(path, i, shell_width=.3*u.pc, interrupt="bse"):
     
     return ahs_list, brs, semis, Mtots, rh, in_rtid_binary
 
-def compute_Pcrit(path, i):
+def compute_Pcrit(path, i, clip=False):
     """
     return critical orbital period for tidal disruption
       for binaries WITHIN RTID!
@@ -1023,15 +1023,16 @@ def compute_Pcrit(path, i):
    
     binaries.loadtxt(path+"data.%i.binary"%i)
     rrel, in_rtid_binary = clip_outside_rtid(path, binaries, i, in_core_frame=True)
-    in_rtid_binary = [True]*len(rrel) # For first panel remove extraneous periods
+    if clip==False:
+        in_rtid_binary = [True]*len(rrel) # For first panel remove extraneous periods
 
     binaries = binaries[in_rtid_binary]
     b_r = rrel[in_rtid_binary]
     Mtot = binaries.mass*u.Msun
     a = binaries.semi*u.pc
-    P=calc_P(a, Mtot).to(u.yr)
+    P=calc_P(a, Mtot).to(u.yr)#[in_rtid_binary]
     
-    e=binaries.ecc
+    # e=binaries.ecc
 
     m1s = binaries.p1.mass*u.Msun
     m2s = binaries.p2.mass*u.Msun
@@ -1174,8 +1175,6 @@ def create_binary_matrix(path, i_list, save=False, savepath=None,
                  
     return period_matrix, a_matrix, e_matrix, m1_matrix, m2_matrix, m1_ID_matrix, m2_ID_matrix, array_of_bids
 
-
-# plotting functions
 
 
 
