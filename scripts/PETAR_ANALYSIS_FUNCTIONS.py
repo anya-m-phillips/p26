@@ -1059,7 +1059,7 @@ def compute_Pcrit(path, i):
     binary_a_disrupt = np.array(binary_a_disrupt) * u.au
     # print(len(binary_a_disrupt))
     binary_P_disrupt = calc_P(binary_a_disrupt, Mtot).to(u.yr) 
-    return binary_P_disrupt
+    return P, binary_P_disrupt
 
 
 def create_binary_matrix(path, i_list, save=False, savepath=None,
