@@ -1,0 +1,1 @@
+Submitted to ApJ, [arx8iv:2603.06790](https://arxiv.org/abs/2603.06790)
